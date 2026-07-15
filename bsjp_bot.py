@@ -22,9 +22,17 @@ LIST_SAHAM = [
 def kirim_pesan(pesan):
     try:
         url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
-        requests.get(url, params={'chat_id': CHAT_ID, 'text': pesan, 'parse_mode': 'Markdown'}, timeout=10)
+        resp = requests.get(url, params={'chat_id': CHAT_ID, 'text': pesan, 'parse_mode': 'Markdown'}, timeout=10)
+        if resp.status_code == 200:
+            hasil = resp.json()
+            if not hasil.get('ok'):
+                print(f"❌ ERROR DARI TELEGRAM: {hasil.get('description')}")
+            else:
+                print("✅ Pesan berhasil terkirim!")
+        else:
+            print(f"❌ HTTP Error: {resp.status_code}")
     except Exception as e:
-        print(f"Error kirim: {e}")
+        print(f"❌ Gagal konek: {e}")
 
 def ambil_sentimen_sederhana(kode):
     """Cek sentimen dari nama saham (backup jika gagal scrap)"""
