@@ -8,8 +8,8 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # --- 🔴 GANTI DENGAN TOKEN BARU KAMU (JANGAN SHARE!) ---
-TOKEN = "8995282419:AAF6KjOuNx7yXr-5_eIaJJ-2IZfTPFS0jmY"   # Ganti dengan Token baru dari BotFather
-CHAT_ID = "8995282419"      # ID kamu (ini aman, tapi tetap ganti kalau mau)
+TOKEN = "8995282419:AAHGtJIb3oeJHtf0LmmeSIpMNpNwjXv1ZK4"   # Ganti dengan Token baru dari BotFather
+CHAT_ID = "8467853860"      # ID kamu (ini aman, tapi tetap ganti kalau mau)
 # ---------------------------------------------------------
 
 # DAFTAR SAHAM IDX (Top 15 likuid)
