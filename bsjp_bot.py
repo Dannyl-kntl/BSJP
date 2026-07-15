@@ -8,7 +8,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # --- 🔴 GANTI DENGAN TOKEN BARU KAMU (JANGAN SHARE!) ---
-TOKEN = "8995282419:AAFwTHBBsboWgKBb2B83RwTcrJVyovZQKV8"   # Ganti dengan Token baru dari BotFather
+TOKEN = "8995282419:AAF6KjOuNx7yXr-5_eIaJJ-2IZfTPFS0jmY"   # Ganti dengan Token baru dari BotFather
 CHAT_ID = "8995282419"      # ID kamu (ini aman, tapi tetap ganti kalau mau)
 # ---------------------------------------------------------
 
