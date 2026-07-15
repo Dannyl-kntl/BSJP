@@ -1,0 +1,17 @@
+name: Scan Sore BSJP
+
+on:
+  schedule:
+    - cron: '30 8 * * 1-5'   # Ini artinya 15:30 WIB (08:30 UTC), Senin-Jumat
+  workflow_dispatch:         # Biar bisa dijalankan manual juga
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - run: pip install yfinance pandas-ta requests
+      - run: python bsjp_bot.py
