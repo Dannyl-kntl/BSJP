@@ -1,0 +1,24 @@
+name: Scan Sore BSJP
+
+on:
+  schedule:
+    - cron: '30 8 * * 1-5'
+  workflow_dispatch:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4          # Upgrade ke v4 (hilangkan warning)
+      - uses: actions/setup-python@v5     # Upgrade ke v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas==2.0.3 numpy==1.24.3
+          pip install yfinance==0.2.28
+          pip install pandas-ta==0.3.14b
+          pip install requests
+      - name: Run scan
+        run: python bsjp_bot.py
