@@ -2,7 +2,7 @@ name: BSJP Scanner Sore (Upgrade)
 
 on:
   schedule:
-    - cron: '45 8 * * 1-5'   # 15:45 WIB (08:45 UTC) - Senin s/d Jumat
+    - cron: '30 8 * * 1-5'   # 08:30 UTC = 16:30 WITA
   workflow_dispatch:          # Tombol untuk menjalankan manual (tes)
 
 jobs:
